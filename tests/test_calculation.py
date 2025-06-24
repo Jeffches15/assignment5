@@ -131,12 +131,6 @@ def test_from_dict_result_mismatch(caplog):
     # Assert
     assert "Loaded calculation result 10 differs from computed result 5" in caplog.text
 
-from app.calculation import Calculation  # Adjust import path
-
-from app.calculation import Calculation
-
-from app.calculation import Calculation
-
 # covers line 190 in calculator.py
 def test_calculation_str_returns_expected_string():
     calc = Calculation(operation="Addition", operand1=7, operand2=6)
