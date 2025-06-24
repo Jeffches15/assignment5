@@ -400,6 +400,7 @@ def test_undo_returns_false_when_undo_stack_empty():
 
     assert result is False
 
+# covers line 388 of calculator.py
 def test_redo_returns_false_when_redo_stack_empty():
     calc = Calculator() # new instance of Calculator, redo_stack should be empty
     calc.redo_stack.clear()
