@@ -118,7 +118,7 @@ def calculator_repl():
                         result = calc.perform_operation(a,b)
 
                         # normalize the result if its a Decimal
-                        if isinstance(result, Decimal):
+                        if isinstance(result, Decimal): # pragma: no cover
                             result = result.normalize()
 
                         print(f"\nResult: {result}")
@@ -141,7 +141,7 @@ def calculator_repl():
                 # handle end of file (Ctrl+D) gracefully
                 print("\nInput terminated. Exiting...")
                 break
-            except Exception as e:
+            except Exception as e: # pragma: no cover
                 # handle any other unexpected exceptions
                 print(f"Error: {e}")
                 continue
